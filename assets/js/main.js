@@ -13,10 +13,10 @@ themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark");
-    themeToggle.innerHTML = `Light On <i class="bi bi-sun"></i>`;
+    themeToggle.innerHTML = `<i class="fa fa-sun"></i>`;
   } else {
     localStorage.setItem("theme", "light");
-    themeToggle.innerHTML = `Light Out <i class="bi bi-moon-stars"></i>`;
+    themeToggle.innerHTML = `<i class="fa fa-moon"></i>`;
   }
 });
 

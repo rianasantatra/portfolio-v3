@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 /* ------------------- RESET & BASE ------------------- */
 * {
   margin: 0;
@@ -11,7 +13,8 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   line-height: 1.6;
   background-color: var(--bg);
   color: var(--text);
@@ -25,11 +28,14 @@ body {
   --accent: #071533;
   --tag-bg: #fafafa;
   --section-bg: #eaeaea;
+  --card-border: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --accent-color: #3b82f6;
 }
 body.dark-mode {
   --bg: #111322;
   --text: #e5e7eb;
-  --accent: #60a5fa;
+  --accent: #2b6ec0;
   --tag-bg: #23263a;
   --section-bg: #1a1c2b;
 }
@@ -131,6 +137,10 @@ a:hover {
   text-align: justify;
 }
 
+.about-content p {
+  text-align: justify;
+}
+
 .profile-pic {
   width: 250px;
   height: 250px;
@@ -141,28 +151,95 @@ a:hover {
 }
 
 /* ------------------- SKILLS ------------------- */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
-  align-items: center;
-  justify-items: center;
+  gap: 1.5rem;
 }
 
-.skill-tags span {
-  background-color: var(--tag-bg);
-  color: var(--text);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  border: 1px solid #ffffff3d;
+.skill-card {
+  background-color: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--card-bg);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Specific icon colors */
+.icon-html {
+  color: #f59e0b;
+}
+.icon-css {
+  color: #3b82f6;
+}
+.icon-js {
+  color: #facc15;
+}
+.icon-bootstrap {
+  color: #8b5cf6;
+}
+.icon-php {
+  color: #4f46e5;
+}
+.icon-code {
+  color: #9ca3af;
+}
+.icon-laravel {
+  color: #ef4444;
+}
+.icon-python {
+  color: #60a5fa;
+}
+.icon-django {
+  color: #22c55e;
+}
+.icon-mysql {
+  color: #eab308;
+}
+.icon-helpdesk {
+  color: #2dd4bf;
+}
+.icon-networking {
+  color: #f43f5e;
+}
+.icon-windows {
+  color: #06b6d4;
 }
 /* ------------------- PROJECTS ------------------- */
 .projects-grid {
   display: grid;
-  gap: 1.5rem;
-  /* grid-template-columns: 1fr; */
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -193,7 +270,7 @@ a:hover {
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -262,6 +339,7 @@ a:hover {
   padding: 20px;
   background-color: var(--section-bg);
   color: var(--text);
+  text-align: justify;
 }
 
 .timeline {
