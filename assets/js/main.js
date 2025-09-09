@@ -5,7 +5,7 @@ const currentTheme = localStorage.getItem("theme");
 // Apply saved theme on load
 if (currentTheme === "dark") {
   document.body.classList.add("dark-mode");
-  themeToggle.innerHTML = `Light On<i class="bi bi-sun"></i>`;
+  themeToggle.innerHTML = `<i class="bi bi-sun"></i>`;
 }
 
 // Toggle and Save Theme
